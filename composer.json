@@ -1,0 +1,36 @@
+{
+    "name": "frugal-php/jwtauth-plugin",
+    "description": "Gestion des connexions avec jwtauth",
+    "require": {
+        "firebase/php-jwt": "^6.11",
+        "frugal-php/core": "dev-main",
+        "frugal-php/orm": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "FrugalPhpPlugin\\Jwtauth\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Grégory COLLIN",
+            "email": "gregory@badass-coding.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "/Users/gregory/Projets/Boulot/25eme-heure/frugal/core",
+            "options": {
+                "symlink": true
+            }
+        },
+        {
+            "type": "path",
+            "url": "/Users/gregory/Projets/Boulot/25eme-heure/frugal/orm",
+            "options": {
+                "symlink": true
+            }
+        }
+    ]
+}
