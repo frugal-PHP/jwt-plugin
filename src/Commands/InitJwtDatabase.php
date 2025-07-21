@@ -1,6 +1,6 @@
 <?php
 
-namespace FrugalPhpPlugin\Jwtauth\Commands;
+namespace FrugalPhpPlugin\Jwt\Commands;
 
 use Frugal\Core\Commands\AbstractCommand;
 use Frugal\Core\Services\FrugalContainer;

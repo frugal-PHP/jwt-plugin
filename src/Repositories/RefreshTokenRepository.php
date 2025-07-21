@@ -1,10 +1,10 @@
 <?php
 
-namespace FrugalPhpPlugin\Jwtauth\Repositories;
+namespace FrugalPhpPlugin\Jwt\Repositories;
 
 use DateInterval;
 use DateTime;
-use FrugalPhpPlugin\Jwtauth\Entities\RefreshTokenEntity;
+use FrugalPhpPlugin\Jwt\Entities\RefreshTokenEntity;
 use FrugalPhpPlugin\Orm\Entities\AbstractEntity;
 use FrugalPhpPlugin\Orm\Helpers\HydratorHelper;
 use FrugalPhpPlugin\Orm\Repositories\AbstractRepository;

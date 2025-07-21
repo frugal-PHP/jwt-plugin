@@ -1,6 +1,6 @@
 <?php
 
-namespace FrugalPhpPlugin\Jwtauth\DTO;
+namespace FrugalPhpPlugin\Jwt\DTO;
 
 final readonly class AccessTokensDTO
 {

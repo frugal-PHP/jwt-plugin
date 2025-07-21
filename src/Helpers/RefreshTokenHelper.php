@@ -1,10 +1,10 @@
 <?php
 
-namespace FrugalPhpPlugin\Jwtauth\Helpers;
+namespace FrugalPhpPlugin\Jwt\Helpers;
 
 use Frugal\Core\Services\FrugalContainer;
-use FrugalPhpPlugin\Jwtauth\Entities\RefreshTokenEntity;
-use FrugalPhpPlugin\Jwtauth\Repositories\RefreshTokenRepository;
+use FrugalPhpPlugin\Jwt\Entities\RefreshTokenEntity;
+use FrugalPhpPlugin\Jwt\Repositories\RefreshTokenRepository;
 use FrugalPhpPlugin\Orm\Helpers\UuidHelper;
 use React\Promise\PromiseInterface;
 

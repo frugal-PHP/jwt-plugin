@@ -1,11 +1,11 @@
 <?php
 
-namespace FrugalPhpPlugin\JWT;
+namespace FrugalPhpPlugin\Jwt;
 
 use Exception;
 use Frugal\Core\Plugins\AbstractPlugin;
 use Frugal\Core\Services\FrugalContainer;
-use FrugalPhpPlugin\Jwtauth\Commands\InitJwtDatabase;
+use FrugalPhpPlugin\Jwt\Commands\InitJwtDatabase;
 use FrugalPhpPlugin\Orm\Services\SqliteDatabase;
 
 class Plugin extends AbstractPlugin

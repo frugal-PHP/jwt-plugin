@@ -1,6 +1,6 @@
 <?php
 
-namespace FrugalPhpPlugin\Jwtauth\Entities;
+namespace FrugalPhpPlugin\Jwt\Entities;
 
 use FrugalPhpPlugin\Orm\Entities\AbstractEntity;
 

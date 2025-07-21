@@ -1,13 +1,13 @@
 <?php
 
-namespace FrugalPhpPlugin\Jwtauth\Services;
+namespace FrugalPhpPlugin\Jwt\Services;
 
 use Frugal\Core\Services\FrugalContainer;
 use FrugalPhpPlugin\Jwt\Helpers\JwtHelper;
-use FrugalPhpPlugin\Jwtauth\DTO\AccessTokensDTO;
-use FrugalPhpPlugin\Jwtauth\Entities\RefreshTokenEntity;
-use FrugalPhpPlugin\Jwtauth\Helpers\RefreshToken;
-use FrugalPhpPlugin\Jwtauth\Repositories\RefreshTokenRepository;
+use FrugalPhpPlugin\Jwt\DTO\AccessTokensDTO;
+use FrugalPhpPlugin\Jwt\Entities\RefreshTokenEntity;
+use FrugalPhpPlugin\Jwt\Helpers\RefreshToken;
+use FrugalPhpPlugin\Jwt\Repositories\RefreshTokenRepository;
 use React\Promise\PromiseInterface;
 
 class AccessService
