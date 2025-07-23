@@ -23,7 +23,7 @@ class RefreshTokenEntity extends AbstractEntity
 
     public static function getTableName(): string 
     { 
-        return "RefreshToken";
+        return "refresh_token";
     }
 
     public static function getPrimaryKeyName(): string 

@@ -16,7 +16,7 @@ class Plugin extends AbstractPlugin
     {
         parent::init();
         self::checkEnvironmentVariables(["DATABASE_STORAGE_PATH"]);
-        self::loadCommands([InitJwtDatabase::class]);
+        self::loadCommands(['initJWTDatabase' => InitJwtDatabase::class]);
         
          // Check si tout est en place
         if(!file_exists(getenv('ROOT_DIR')."/".getenv('DATABASE_STORAGE_PATH'))) {

@@ -8,7 +8,7 @@ use FrugalPhpPlugin\Jwt\Repositories\RefreshTokenRepository;
 use FrugalPhpPlugin\Orm\Helpers\UuidHelper;
 use React\Promise\PromiseInterface;
 
-class RefreshToken
+class RefreshTokenHelper
 {
     public static function create(string $userId) : PromiseInterface
     {
