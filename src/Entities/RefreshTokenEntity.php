@@ -11,6 +11,16 @@ class RefreshTokenEntity extends AbstractEntity
     public bool $isExpired = false;
     public ?string $expireAt = null;
 
+    public function toDatabase(): array 
+    { 
+        return [
+            'token' => $this->token,
+            'userUuid' => $this->userUuid,
+            'isExpired' => $this->isExpired ? 1 : 0,
+            'expireAt' => $this->expireAt ?: null
+        ];
+    }
+
     public static function getFields(): array 
     {
         return [
