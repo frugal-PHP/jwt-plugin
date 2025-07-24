@@ -4,6 +4,7 @@ namespace FrugalPhpPlugin\Jwt\Repositories;
 
 use DateInterval;
 use DateTime;
+use Frugal\Core\Services\FrugalContainer;
 use FrugalPhpPlugin\Jwt\Entities\RefreshTokenEntity;
 use FrugalPhpPlugin\Orm\Entities\AbstractEntity;
 use FrugalPhpPlugin\Orm\Helpers\HydratorHelper;
@@ -12,6 +13,12 @@ use React\Promise\PromiseInterface;
 
 class RefreshTokenRepository extends AbstractRepository
 {
+    public function __construct()
+    {
+        $database = FrugalContainer::getInstance()->get('tokenOrm');
+        parent::__construct($database);    
+    }
+
     public function getManagedEntityClass(): string 
     { 
         return RefreshTokenEntity::class;
@@ -44,6 +51,18 @@ class RefreshTokenRepository extends AbstractRepository
                 }
 
                 return $entities;
+            });
+    }
+
+    public function countUserRefreshTokens(string $userId) : PromiseInterface
+    {
+        $tableName = $this->getManagedEntityClass()::getTableName();
+        $query = "SELECT count(token) as num FROM ".$tableName." WHERE user_uuid=:userUuid";
+        $parameters = ["userUuid" => $userId];
+
+        return $this->db->execute($query, $parameters)
+            ->then(function (array $rows) {
+                return (int) current($rows)['num'];
             });
     }
     
